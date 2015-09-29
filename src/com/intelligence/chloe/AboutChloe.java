@@ -4,6 +4,8 @@ import org.joda.time.LocalDate;
 import org.joda.time.Period;
 import org.joda.time.PeriodType;
 
+import java.io.FileNotFoundException;
+
 /**
  * @author Didier Leonard-Jean Charles
  * @version Chlöe 1.0.0
@@ -87,7 +89,13 @@ public class AboutChloe {
         return period.getYears();
     }
 
-    public String getId() {
+    public String getId() throws FileNotFoundException {
+        ChloeFile file = new ChloeFile();
+        if(file.checkIfFileExist()){
+            file.populateCFcontents();
+
+        }
+        
         return id;
     }
 }

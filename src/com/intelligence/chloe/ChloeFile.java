@@ -27,7 +27,7 @@ public class ChloeFile {
 
     }
 
-    private void createCF(){
+    public void createCF(){
         dateWeMet = new LocalDate();
 
         this.iAm.put("ip_address", this.ipAddress);
@@ -48,7 +48,7 @@ public class ChloeFile {
         }
     }
 
-    private void getCFcontents() throws FileNotFoundException {
+    public void populateCFcontents() throws FileNotFoundException {
         JSONParser parser = new JSONParser();
         try {
             Object jsonChloe = parser.parse(new FileReader(f));
@@ -67,12 +67,32 @@ public class ChloeFile {
         }
     }
 
-    private boolean checkIfFileExist(){
+    public boolean checkIfFileExist(){
         // if the file exists
         if(f.exists()) {
             return true;
         }else{
             return false;
         }
+    }
+
+    public LocalDate getDateWeMet() {
+        return dateWeMet;
+    }
+
+    public String getIpAddress() {
+        return ipAddress;
+    }
+
+    public String getMacAddress() {
+        return macAddress;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getTime_zone() {
+        return time_zone;
     }
 }
