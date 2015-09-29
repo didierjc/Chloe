@@ -19,15 +19,24 @@ public class ChloeFile {
     private String macAddress = null;
     private String id = null;
     private String time_zone = null;
+    private String chloeId = null;
 
     public boolean firstTime = true;
     public JSONObject iAm = new JSONObject();
 
     public ChloeFile() {
-
+        if(checkIfFileExist()){
+            try {
+                populateCFcontents();
+            }catch (FileNotFoundException e){
+                e.printStackTrace();
+            }
+        }else{
+            createCF();
+        }
     }
 
-    public void createCF(){
+    private void createCF(){
         dateWeMet = new LocalDate();
 
         this.iAm.put("ip_address", this.ipAddress);
@@ -35,6 +44,7 @@ public class ChloeFile {
         this.iAm.put("owner_id", this.id);
         this.iAm.put("date_we_met", this.dateWeMet.toString());
         this.iAm.put("timezone", this.time_zone);
+        this.iAm.put("chloe_id", this.chloeId);
 
         try{
 
@@ -94,5 +104,9 @@ public class ChloeFile {
 
     public String getTime_zone() {
         return time_zone;
+    }
+
+    public String getChloeId() {
+        return chloeId;
     }
 }

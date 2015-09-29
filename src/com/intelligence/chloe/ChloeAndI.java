@@ -83,8 +83,6 @@ public class ChloeAndI {
         return true;
     }
 
-
-
     public String getIpAddress() {
         return ipAddress;
     }

@@ -4,6 +4,7 @@ import org.joda.time.LocalDate;
 import org.joda.time.Period;
 import org.joda.time.PeriodType;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 
 /**
@@ -29,10 +30,14 @@ public class AboutChloe {
     private String id = null;
 
     public AboutChloe() {
-        GenerateId newId = new GenerateId();
-        this.id = newId.getId();
+        try {
+            id();
+        }catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
         System.out.println("Hello. Please allow me to introduce myself, my name is " + NAME);
-        System.out.println("My ID is " + this.id + "\n");
+        System.out.println("My ID is " + getId());
     }
 
     public void askAQuestion(String ques){
@@ -89,13 +94,17 @@ public class AboutChloe {
         return period.getYears();
     }
 
-    public String getId() throws FileNotFoundException {
+    public String id() throws FileNotFoundException {
         ChloeFile file = new ChloeFile();
         if(file.checkIfFileExist()){
-            file.populateCFcontents();
-
+            return id = file.getChloeId();
+        }else{
+            GenerateId newId = new GenerateId();
+            return id = newId.getId();
         }
-        
+    }
+
+    public String getId() {
         return id;
     }
 }
