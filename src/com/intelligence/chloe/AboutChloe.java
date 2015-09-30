@@ -22,12 +22,16 @@ public class AboutChloe {
             + "informed";
     public static final LocalDate DOB = new LocalDate (2000, 4, 26);
     public static final String GENDER = "female";
+    public static final String HEIGHT = "5-feet 8-inches";
+    public static final String WEIGHT = "130-pounds";
+    public static final String BODY = "38-26-36";
     public static final String CREATOR = "Didier Leonard-Jean Charles";
 
 
     // making this a little fun
     private String question;
     private String id = null;
+    private ChloeFile file = new ChloeFile();
 
     public AboutChloe() {
         try {
@@ -38,6 +42,13 @@ public class AboutChloe {
 
         System.out.println("Hello. Please allow me to introduce myself, my name is " + NAME);
         System.out.println("My ID is " + getId());
+    }
+
+    private void writeElements() {
+        String[] arrElements = new String[1];
+        arrElements[0] = this.id;
+
+        file.writeCF(arrElements);
     }
 
     public void askAQuestion(String ques){
@@ -95,7 +106,6 @@ public class AboutChloe {
     }
 
     public String id() throws FileNotFoundException {
-        ChloeFile file = new ChloeFile();
         if(file.checkIfFileExist()){
             return id = file.getChloeId();
         }else{

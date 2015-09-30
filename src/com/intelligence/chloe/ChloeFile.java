@@ -8,7 +8,6 @@ import org.joda.time.LocalDate;
 import org.json.simple.*;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
 import java.io.*;
 
 public class ChloeFile {
@@ -20,9 +19,9 @@ public class ChloeFile {
     private String id = null;
     private String time_zone = null;
     private String chloeId = null;
+    private JSONObject iAm = new JSONObject();
 
     public boolean firstTime = true;
-    public JSONObject iAm = new JSONObject();
 
     public ChloeFile() {
         if(checkIfFileExist()){
@@ -37,22 +36,27 @@ public class ChloeFile {
     }
 
     private void createCF(){
-        dateWeMet = new LocalDate();
+        try{
+            FileWriter file = new FileWriter(this.f);
+            file.flush();
+            file.close();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
 
-        this.iAm.put("ip_address", this.ipAddress);
-        this.iAm.put("mac_address", this.macAddress);
-        this.iAm.put("owner_id", this.id);
-        this.iAm.put("date_we_met", this.dateWeMet.toString());
-        this.iAm.put("timezone", this.time_zone);
-        this.iAm.put("chloe_id", this.chloeId);
+    public void writeCF(String[] arr){
+        this.iAm.put("ip_address", arr[0]);
+        this.iAm.put("mac_address", arr[1]);
+        this.iAm.put("owner_id", arr[2]);
+        this.iAm.put("date_we_met", arr[3]);
+        this.iAm.put("timezone", arr[4]);
 
         try{
-
             FileWriter file = new FileWriter(this.f);
             file.write(this.iAm.toJSONString());
             file.flush();
             file.close();
-
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -69,6 +73,7 @@ public class ChloeFile {
             this.id = (String) objectChloe.get("owner_id");
             this.dateWeMet = (LocalDate) new LocalDate(objectChloe.get("date_we_met"));
             this.time_zone = (String) objectChloe.get("timezone");
+            this.chloeId = (String) objectChloe.get("chloe_id");
 
         }catch (IOException e){
             e.printStackTrace();
@@ -108,5 +113,9 @@ public class ChloeFile {
 
     public String getChloeId() {
         return chloeId;
+    }
+
+    public File getFile() {
+        return f;
     }
 }

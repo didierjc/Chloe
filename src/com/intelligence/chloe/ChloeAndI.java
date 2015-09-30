@@ -6,7 +6,7 @@ package com.intelligence.chloe;
  *
  */
 
-import java.io.*;
+import java.io.FileNotFoundException;
 import java.net.*;
 import org.joda.time.LocalDate;
 import java.util.Calendar;
@@ -15,13 +15,13 @@ import java.util.TimeZone;
 
 public class ChloeAndI {
 
-    private File f = new File("/_chloe/abt/_chloeandi.chloe");
     private String ipAddress = null;
     private String macAddress = null;
     private NetworkInterface network = null;
     private String id = null;
     private String time_zone = null;
     private LocalDate dateWeMet = null;
+    private ChloeFile f = new ChloeFile();
 
     public boolean firstTime = true;
 
@@ -44,7 +44,11 @@ public class ChloeAndI {
 
         }else{
             // get owner info
-
+            this.ipAddress = f.getIpAddress();
+            this.macAddress = f.getMacAddress();
+            this.id = f.getId();
+            this.time_zone = f.getTime_zone();
+            this.dateWeMet = f.getDateWeMet();
         }
     }
 
@@ -60,6 +64,7 @@ public class ChloeAndI {
             }
 
             macAddress = sb.toString();
+            writeElements();
 
         } catch (UnknownHostException e) {
             e.printStackTrace();
@@ -69,18 +74,28 @@ public class ChloeAndI {
     }
 
     private boolean checkIfFirstTime(){
-        boolean bool = false; // by default this IS that first time we've met; there owner file DOES NOT exist
+        boolean bool = false; // by default this IS that first time we've met; the owner file DOES NOT exist
 
         // if the file exists
-        if(f.exists()) {
-            bool = true;
-            this.firstTime = false;
-            return false;
+        if(f.checkIfFileExist()) {
+            bool = true; // yes the file already exists
+            this.firstTime = false; // not the first time
+            return false; // not the first time
         }else{
-            this.firstTime = true;
+            this.firstTime = true; // yep! it's the first time
+            return true; // yep! it's the first time
         }
+    }
 
-        return true;
+    private void writeElements() {
+        String[] arrElements = new String[5];
+        arrElements[0] = this.ipAddress;
+        arrElements[1] = this.macAddress;
+        arrElements[2] = this.id;
+        arrElements[3] = this.dateWeMet.toString();
+        arrElements[4] = this.time_zone;
+
+        f.writeCF(arrElements);
     }
 
     public String getIpAddress() {
