@@ -31,6 +31,7 @@ public class ChloeFile {
 
         try {
             getCFcontents();
+            firstTime = false;
         }catch (FileNotFoundException e){
             e.printStackTrace();
         }
