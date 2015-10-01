@@ -9,9 +9,8 @@ package com.intelligence.chloe;
 import java.io.FileNotFoundException;
 import java.net.*;
 import org.joda.time.LocalDate;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.TimeZone;
+
+import java.util.*;
 
 public class ChloeAndI {
 
@@ -21,7 +20,7 @@ public class ChloeAndI {
     private String id = null;
     private String time_zone = null;
     private LocalDate dateWeMet = null;
-    private ChloeFile f = new ChloeFile();
+    private ChloeFile file = new ChloeFile();
 
     public boolean firstTime = true;
 
@@ -44,11 +43,11 @@ public class ChloeAndI {
 
         }else{
             // get owner info
-            this.ipAddress = f.getIpAddress();
-            this.macAddress = f.getMacAddress();
-            this.id = f.getId();
-            this.time_zone = f.getTime_zone();
-            this.dateWeMet = f.getDateWeMet();
+            this.ipAddress = file.getIpAddress();
+            this.macAddress = file.getMacAddress();
+            this.id = file.getId();
+            this.time_zone = file.getTime_zone();
+            this.dateWeMet = file.getDateWeMet();
         }
     }
 
@@ -77,7 +76,7 @@ public class ChloeAndI {
         boolean bool = false; // by default this IS that first time we've met; the owner file DOES NOT exist
 
         // if the file exists
-        if(f.checkIfFileExist()) {
+        if(file.checkIfFileExist()) {
             bool = true; // yes the file already exists
             this.firstTime = false; // not the first time
             return false; // not the first time
@@ -88,14 +87,14 @@ public class ChloeAndI {
     }
 
     private void writeElements() {
-        String[] arrElements = new String[5];
-        arrElements[0] = this.ipAddress;
-        arrElements[1] = this.macAddress;
-        arrElements[2] = this.id;
-        arrElements[3] = this.dateWeMet.toString();
-        arrElements[4] = this.time_zone;
+        Map<String,String> mapElements = new HashMap<String,String>();
+        mapElements.put("ip_address", this.ipAddress);
+        mapElements.put("mac_address", this.macAddress);
+        mapElements.put("owner_id", this.id);
+        mapElements.put("date_we_met", this.dateWeMet.toString());
+        mapElements.put("timezone", this.time_zone);
 
-        f.writeCF(arrElements);
+        file.writeCF(mapElements);
     }
 
     public String getIpAddress() {

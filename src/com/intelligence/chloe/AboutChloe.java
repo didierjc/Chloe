@@ -6,6 +6,8 @@ import org.joda.time.PeriodType;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Didier Leonard-Jean Charles
@@ -45,10 +47,10 @@ public class AboutChloe {
     }
 
     private void writeElements() {
-        String[] arrElements = new String[1];
-        arrElements[0] = this.id;
+        Map<String,String> mapElements = new HashMap<String,String>();
+        mapElements.put("chloe_id", this.id);
 
-        file.writeCF(arrElements);
+        file.writeCF(mapElements);
     }
 
     public void askAQuestion(String ques){
@@ -110,6 +112,7 @@ public class AboutChloe {
             return id = file.getChloeId();
         }else{
             GenerateId newId = new GenerateId();
+            writeElements();
             return id = newId.getId();
         }
     }

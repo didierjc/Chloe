@@ -9,6 +9,7 @@ import org.json.simple.*;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import java.io.*;
+import java.util.Map;
 
 public class ChloeFile {
 
@@ -45,12 +46,10 @@ public class ChloeFile {
         }
     }
 
-    public void writeCF(String[] arr){
-        this.iAm.put("ip_address", arr[0]);
-        this.iAm.put("mac_address", arr[1]);
-        this.iAm.put("owner_id", arr[2]);
-        this.iAm.put("date_we_met", arr[3]);
-        this.iAm.put("timezone", arr[4]);
+    public void writeCF(Map<String,String> map){
+        for(Map.Entry<String, String> chloeEntry : map.entrySet()){
+            this.iAm.put(chloeEntry.getKey(), chloeEntry.getValue());
+        }
 
         try{
             FileWriter file = new FileWriter(this.f);
