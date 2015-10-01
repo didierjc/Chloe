@@ -25,14 +25,14 @@ public class ChloeFile {
     public boolean firstTime = true;
 
     public ChloeFile() {
-        if(checkIfFileExist()){
-            try {
-                populateCFcontents();
-            }catch (FileNotFoundException e){
-                e.printStackTrace();
-            }
-        }else{
+        if(!checkIfFileExist()){
             createCF();
+        }
+
+        try {
+            getCFcontents();
+        }catch (FileNotFoundException e){
+            e.printStackTrace();
         }
     }
 
@@ -61,7 +61,7 @@ public class ChloeFile {
         }
     }
 
-    public void populateCFcontents() throws FileNotFoundException {
+    public void getCFcontents() throws FileNotFoundException {
         JSONParser parser = new JSONParser();
         try {
             Object jsonChloe = parser.parse(new FileReader(f));

@@ -22,8 +22,8 @@ public class AboutChloe {
             + "and/or business life. These tasks include running errands, arranging travel, arranging activities, as well as handling "
             + "more localized services such as making recommendations, shopping, remember important dates and finally, keeping you "
             + "informed";
-    public static final LocalDate DOB = new LocalDate (2000, 4, 26);
-    public static final String GENDER = "female";
+    public static final LocalDate DOB = new LocalDate (1990, 4, 26);
+    public static final String GENDER = "sexy female";
     public static final String HEIGHT = "5-feet 8-inches";
     public static final String WEIGHT = "130-pounds";
     public static final String BODY = "38-26-36";
@@ -108,7 +108,7 @@ public class AboutChloe {
     }
 
     public String id() throws FileNotFoundException {
-        if(file.checkIfFileExist()){
+        if(!file.firstTime){
             return id = file.getChloeId();
         }else{
             GenerateId newId = new GenerateId();
