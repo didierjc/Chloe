@@ -75,7 +75,7 @@ public class ChloeFile {
                 this.ipAddress = (String) objectChloe.get("ip_address");
                 this.macAddress = (String) objectChloe.get("mac_address");
                 this.id = (String) objectChloe.get("owner_id");
-                this.dateWeMet = (LocalDate) objectChloe.get("date_we_met");
+                this.dateWeMet = new LocalDate(objectChloe.get("date_we_met"));
                 this.time_zone = (String) objectChloe.get("timezone");
                 this.chloeId = (String) objectChloe.get("chloe_id");
 
@@ -108,9 +108,7 @@ public class ChloeFile {
         return macAddress;
     }
 
-    public String getId() {
-        return id;
-    }
+    public String getId() { return id; }
 
     public String getTime_zone() {
         return time_zone;

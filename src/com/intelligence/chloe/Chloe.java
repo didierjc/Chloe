@@ -13,7 +13,6 @@ public class Chloe {
     public static void main(String[] args) {
         AboutChloe chloe = new AboutChloe();
         ChloeAndI iam = new ChloeAndI();
-
     }
 
 }
