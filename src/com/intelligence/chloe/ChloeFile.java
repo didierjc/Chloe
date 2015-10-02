@@ -31,7 +31,9 @@ public class ChloeFile {
 
         try {
             getCFcontents();
-            firstTime = false;
+            if(f.length() > 0){
+                firstTime = false;
+            }
         }catch (FileNotFoundException e){
             e.printStackTrace();
         }
@@ -64,21 +66,24 @@ public class ChloeFile {
 
     public void getCFcontents() throws FileNotFoundException {
         JSONParser parser = new JSONParser();
-        try {
-            Object jsonChloe = parser.parse(new FileReader(f));
-            JSONObject objectChloe = (JSONObject) jsonChloe;
 
-            this.ipAddress = (String) objectChloe.get("ip_address");
-            this.macAddress = (String) objectChloe.get("mac_address");
-            this.id = (String) objectChloe.get("owner_id");
-            this.dateWeMet = (LocalDate) new LocalDate(objectChloe.get("date_we_met"));
-            this.time_zone = (String) objectChloe.get("timezone");
-            this.chloeId = (String) objectChloe.get("chloe_id");
+        if(f.length() > 0) {
+            try {
+                Object jsonChloe = parser.parse(new FileReader(f));
+                JSONObject objectChloe = (JSONObject) jsonChloe;
 
-        }catch (IOException e){
-            e.printStackTrace();
-        }catch (ParseException e){
-            e.printStackTrace();
+                this.ipAddress = (String) objectChloe.get("ip_address");
+                this.macAddress = (String) objectChloe.get("mac_address");
+                this.id = (String) objectChloe.get("owner_id");
+                this.dateWeMet = (LocalDate) objectChloe.get("date_we_met");
+                this.time_zone = (String) objectChloe.get("timezone");
+                this.chloeId = (String) objectChloe.get("chloe_id");
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
     }
 

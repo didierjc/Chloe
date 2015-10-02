@@ -107,13 +107,13 @@ public class AboutChloe {
         return period.getYears();
     }
 
-    public String id() throws FileNotFoundException {
+    public void id() throws FileNotFoundException {
         if(!file.firstTime){
-            return id = file.getChloeId();
+            id = file.getChloeId();
         }else{
             GenerateId newId = new GenerateId();
+            id = newId.getId();
             writeElements();
-            return id = newId.getId();
         }
     }
 

@@ -40,6 +40,9 @@ public class ChloeAndI {
             Calendar calendar = new GregorianCalendar();
             TimeZone timeZone = calendar.getTimeZone();
             time_zone = timeZone.getID();
+            this.dateWeMet = (LocalDate) new LocalDate();
+
+            writeElements();
 
         }else{
             // get owner info
@@ -63,7 +66,6 @@ public class ChloeAndI {
             }
 
             macAddress = sb.toString();
-            writeElements();
 
         } catch (UnknownHostException e) {
             e.printStackTrace();
@@ -73,16 +75,12 @@ public class ChloeAndI {
     }
 
     private boolean checkIfFirstTime(){
-        boolean bool = false; // by default this IS that first time we've met; the owner file DOES NOT exist
-
-        // if the file exists
-        if(file.checkIfFileExist()) {
-            bool = true; // yes the file already exists
-            this.firstTime = false; // not the first time
-            return false; // not the first time
+        // if the owner ID is not NULL...
+        if(file.getId() != null) {
+            this.firstTime = false;
+            return false; // ...then this is not the first time
         }else{
-            this.firstTime = true; // yep! it's the first time
-            return true; // yep! it's the first time
+            return true; // ...otherwise, yep! It's the first time
         }
     }
 
