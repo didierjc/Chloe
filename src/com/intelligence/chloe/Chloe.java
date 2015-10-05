@@ -11,8 +11,12 @@ import java.util.Scanner;
 public class Chloe {
 
     public static void main(String[] args) {
+        ChloeFile cf = new ChloeFile();
         AboutChloe chloe = new AboutChloe();
         ChloeAndI iam = new ChloeAndI();
+
+        // ask to connect to Social Media, browsing history, etc.
+
     }
 
 }

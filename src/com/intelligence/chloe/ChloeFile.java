@@ -9,6 +9,7 @@ import org.json.simple.*;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import java.io.*;
+import java.util.Iterator;
 import java.util.Map;
 
 public class ChloeFile {
@@ -55,11 +56,34 @@ public class ChloeFile {
         }
 
         try{
+            //read file
+            BufferedReader in = new BufferedReader(new FileReader(this.f));
+            String line = null;
+            StringBuilder sb = new StringBuilder();
+            while((line = in.readLine()) != null){
+                sb.append(line);
+            }
+            in.close();
+
+            //create a json object
+            JSONParser parser = new JSONParser();
+            JSONObject json = new JSONObject();
+            if(sb.length() != 0) {
+                json = (JSONObject) parser.parse(sb.toString());
+            }
+
+            for(Iterator iterator = json.keySet().iterator(); iterator.hasNext();) {
+                String key = (String) iterator.next();
+                this.iAm.put(key, json.get(key));
+            }
+
             FileWriter file = new FileWriter(this.f);
             file.write(this.iAm.toJSONString());
             file.flush();
             file.close();
         }catch (IOException e){
+            e.printStackTrace();
+        } catch (ParseException e) {
             e.printStackTrace();
         }
     }
@@ -94,6 +118,29 @@ public class ChloeFile {
         }else{
             return false;
         }
+    }
+
+    public boolean checkIfKeyExist(String key){
+        JSONParser parser = new JSONParser();
+        Object jsonChloe = null;
+
+        try {
+            jsonChloe = parser.parse(new FileReader(f));
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        } catch(NullPointerException e) {
+            e.printStackTrace();
+        }
+
+        JSONObject objectChloe = (JSONObject) jsonChloe;
+
+        if(objectChloe.containsKey(key)){
+            return true;
+        }
+
+        return false;
     }
 
     public LocalDate getDateWeMet() {

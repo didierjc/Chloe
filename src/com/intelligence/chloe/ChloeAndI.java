@@ -6,10 +6,8 @@ package com.intelligence.chloe;
  *
  */
 
-import java.io.FileNotFoundException;
 import java.net.*;
 import org.joda.time.LocalDate;
-
 import java.util.*;
 
 public class ChloeAndI {
