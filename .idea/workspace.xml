@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c17a822c-9e47-442d-b195-290fecbcccd4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/intelligence/chloe/_SocialMedia.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/intelligence/chloe/Chloe.java" afterPath="$PROJECT_DIR$/src/com/intelligence/chloe/Chloe.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="c17a822c-9e47-442d-b195-290fecbcccd4" name="Default" comment="" />
     <ignored path="chloe.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,7 +26,7 @@
       <file leaf-file-name="Chloe.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/intelligence/chloe/Chloe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52380955">
+            <state vertical-scroll-proportion="0.44444445">
               <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
               <folding />
             </state>
@@ -548,12 +543,12 @@
       <workItem from="1443750401763" duration="6289000" />
       <workItem from="1443819289428" duration="1013000" />
       <workItem from="1443902088377" duration="328000" />
-      <workItem from="1443921282038" duration="9647000" />
+      <workItem from="1443921282038" duration="9745000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56751000" />
+    <option name="totallyTimeSpent" value="56849000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="32" y="36" width="1210" height="671" extended-state="0" />
@@ -1037,7 +1032,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/intelligence/chloe/Chloe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52380955">
+        <state vertical-scroll-proportion="0.44444445">
           <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
           <folding />
         </state>
