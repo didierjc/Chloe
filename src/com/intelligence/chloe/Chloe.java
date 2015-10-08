@@ -17,9 +17,11 @@ public class Chloe {
         AboutChloe chloe = new AboutChloe();
         ChloeAndI iam = new ChloeAndI();
         Scanner scan = new Scanner(System.in);
-        _SocialMedia _sm = new _SocialMedia();
         String answers = null;
         String perm = null;
+
+        __CMisc cmisc = new __CMisc();
+        _SocialMedia _sm = new _SocialMedia();
 
         // ask to connect to Social Media, browsing history, etc.
         if(!cf.checkIfKeyExist("permission_socialmedia")) {
@@ -31,13 +33,9 @@ public class Chloe {
                     "[ex. Facebook,Twitter,Instagram,LinkedIn]...");
             answers = scan.nextLine();
 
-            if (answers.toLowerCase().contains("yes") || answers.toLowerCase().contains("sure")) {
+            if (answers.toLowerCase().contains("yes") || answers.toLowerCase().contains("sure") || answers.toLowerCase().contains("facebook") || answers.toLowerCase().contains("twitter") || answers.toLowerCase().contains("instagram") || answers.toLowerCase().contains("linkedin")) {
                 System.out.println("Sweet! I'm on it...\n");
                 perm = "true";
-
-            }else if(answers.toLowerCase().contains("facebook") || answers.toLowerCase().contains("twitter") || answers.toLowerCase().contains("instagram")|| answers.toLowerCase().contains("linkedin")){
-                perm = "true";
-                _sm.parseSocialList(answers);
 
             }else if(answers.toLowerCase().contains("no")) {
                 System.out.println("Ok, no problem...\n");
@@ -47,14 +45,18 @@ public class Chloe {
                 System.out.println("I'm not sure what you mean...\n");
             }
 
-            if(perm.equals("true")){
-                permElements.put("permission_socialmedia", "true");
-            }else if(perm.equals("false")){
-                permElements.put("permission_socialmedia", "false");
+            switch (perm) {
+                case "true":
+                    permElements.put("permission_socialmedia", "true");
+                    break;
+                case "false":
+                    permElements.put("permission_socialmedia", "false");
+                    break;
             }
 
             if(perm != null){
                 cf.writeCF(permElements);
+                _sm.parseSocialList(answers);
             }
         }
     }

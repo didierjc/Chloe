@@ -8,6 +8,7 @@ public class __CConfig {
     private static final long FB_APPID = 1503891386597329L;
     private static final String FB_APPSECRET = "3e64df46c06d9641900ac72a11e9f14d";
     private static final String FB_APIVERSION = "v2.4";
+    private static final String FB_APPTOKEN = "1503891386597329|wF3IVVc8JfdzfdDRBbDV9-IYzo8";
 
     public __CConfig() {}
 
@@ -21,5 +22,9 @@ public class __CConfig {
 
     public static String getFbApiversion() {
         return FB_APIVERSION;
+    }
+
+    public static String getFbApptoken(){
+        return FB_APPTOKEN;
     }
 }
