@@ -1,5 +1,8 @@
 package com.intelligence.chloe;
 
+import facebook4j.Facebook;
+import facebook4j.FacebookFactory;
+import facebook4j.conf.Configuration;
 import facebook4j.conf.ConfigurationBuilder;
 import java.util.*;
 
@@ -11,12 +14,24 @@ public class _SocialMedia {
     private List<String> socialList = new ArrayList();
     __CConfig config = new __CConfig();
     __CMisc cmisc = new __CMisc();
-    ConfigurationBuilder fbconfBuilder = new ConfigurationBuilder();
+    ConfigurationBuilder fbConfBuilder = new ConfigurationBuilder();
 
+    private void facebookConfig(){
+        fbConfBuilder.setDebugEnabled(true);
+        // Set application id, secret key and access token
+        fbConfBuilder.setOAuthAppId(String.valueOf(config.getFbAppid()));
+        fbConfBuilder.setOAuthAppSecret(config.getFbAppsecret());
+        fbConfBuilder.setOAuthAccessToken(config.getFbApptoken());
+    }
 
-    public _SocialMedia() {
+    private void facebookPermissions(String perm, Boolean ssl, Boolean json){
+        fbConfBuilder.setOAuthPermissions(perm);
+        fbConfBuilder.setUseSSL(ssl);
+        fbConfBuilder.setJSONStoreEnabled(json);
 
     }
+
+    public _SocialMedia() {}
 
     public void parseSocialList(String list){
         socialList = Arrays.asList(list.split(","));
@@ -26,11 +41,17 @@ public class _SocialMedia {
         return socialList;
     }
 
-    private void facebookConfig(){
-        fbconfBuilder.setDebugEnabled(true);
-        // Set application id, secret key and access token
-        fbconfBuilder.setOAuthAppId(String.valueOf(config.getFbAppid()));
-        fbconfBuilder.setOAuthAppSecret(config.getFbAppsecret());
-        fbconfBuilder.setOAuthAccessToken(config.getFbApptoken());
+    public void fbConnect(String perm, Boolean ssl, Boolean json){
+        facebookConfig();
+        facebookPermissions(perm,ssl,json);
+
+        // Create configuration object
+        Configuration configuration = fbConfBuilder.build();
+
+        // Create facebook instance
+        FacebookFactory ff = new FacebookFactory(configuration);
+        Facebook facebook = ff.getInstance();
     }
+
+
 }

@@ -1,6 +1,7 @@
 package com.intelligence.chloe;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -19,6 +20,7 @@ public class Chloe {
         Scanner scan = new Scanner(System.in);
         String answers = null;
         String perm = null;
+        List<String> smList = null;
 
         __CMisc cmisc = new __CMisc();
         _SocialMedia _sm = new _SocialMedia();
@@ -57,6 +59,14 @@ public class Chloe {
             if(perm != null){
                 cf.writeCF(permElements);
                 _sm.parseSocialList(answers);
+                smList = _sm.getSocialList();
+            }
+
+            if(cmisc.blnContains("facebook",smList)){
+                String p = "user_friends,public_profile,user_about_me,user_actions.books,user_actions.fitness,user_actions.music,user_actions.news,user_actions.video,user_birthday,user_events,user_games_activity,user_hometown,user_likes,user_location,user_posts,user_relationships,user_relationship_details,user_tagged_places,user_work_history,rsvp_event";
+                Boolean s = true;
+                Boolean j = true;
+                _sm.fbConnect(p,s,j);
             }
         }
     }
