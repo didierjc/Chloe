@@ -31,7 +31,7 @@ public class AboutChloe {
     // making this a little fun
     private String question;
     private String id = null;
-    private ChloeFile file = new ChloeFile();
+    private ChloeFile cf = new ChloeFile();
 
     public AboutChloe() {
         try {
@@ -40,15 +40,18 @@ public class AboutChloe {
             e.printStackTrace();
         }
 
-        System.out.println("Hello. Please allow me to introduce myself, my name is " + NAME);
-        System.out.println("My ID is " + getId());
+        if(cf.firstTime) {
+            System.out.println("Hello. Please allow me to introduce myself, my name is " + NAME);
+        }else{
+            System.out.println("Hey, how can I help?");
+        }
     }
 
     private void writeElements() {
         Map<String,String> mapElements = new HashMap<String,String>();
         mapElements.put("chloe_id", this.id);
 
-        file.writeCF(mapElements);
+        cf.writeCF(mapElements);
     }
 
     public void askAQuestion(String ques){
@@ -106,8 +109,8 @@ public class AboutChloe {
     }
 
     public void id() throws FileNotFoundException {
-        if(!file.firstTime){
-            id = file.getChloeId();
+        if(!cf.firstTime){
+            id = cf.getChloeId();
         }else{
             GenerateId newId = new GenerateId();
             id = newId.getId();

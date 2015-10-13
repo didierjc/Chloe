@@ -18,7 +18,7 @@ public class ChloeAndI {
     private String id = null;
     private String time_zone = null;
     private LocalDate dateWeMet = null;
-    private ChloeFile file = new ChloeFile();
+    private ChloeFile cf = new ChloeFile();
 
     public boolean firstTime = true;
 
@@ -44,11 +44,11 @@ public class ChloeAndI {
 
         }else{
             // get owner info
-            this.ipAddress = file.getIpAddress();
-            this.macAddress = file.getMacAddress();
-            this.id = file.getId();
-            this.time_zone = file.getTime_zone();
-            this.dateWeMet = file.getDateWeMet();
+            this.ipAddress = cf.getIpAddress();
+            this.macAddress = cf.getMacAddress();
+            this.id = cf.getId();
+            this.time_zone = cf.getTime_zone();
+            this.dateWeMet = cf.getDateWeMet();
         }
     }
 
@@ -74,7 +74,7 @@ public class ChloeAndI {
 
     private boolean checkIfFirstTime(){
         // if the owner ID is not NULL...
-        if(file.getId() != null) {
+        if(cf.getId() != null) {
             this.firstTime = false;
             return false; // ...then this is not the first time
         }else{
@@ -90,7 +90,7 @@ public class ChloeAndI {
         mapElements.put("date_we_met", this.dateWeMet.toString());
         mapElements.put("timezone", this.time_zone);
 
-        file.writeCF(mapElements);
+        cf.writeCF(mapElements);
     }
 
     public String getIpAddress() {
