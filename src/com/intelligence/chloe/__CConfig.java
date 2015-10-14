@@ -11,6 +11,7 @@ public class __CConfig {
     private static final String FB_APPSECRET = "3e64df46c06d9641900ac72a11e9f14d";
     private static final Version FB_APIVERSION = Version.VERSION_2_4;
     private static final String FB_APPTOKEN = "1503891386597329|wF3IVVc8JfdzfdDRBbDV9-IYzo8";
+    private static final String FB_USERTOKEN = "CAAVXxZCZCgZC9EBAAWyZAfqhyumfmi3z4LRAhDYOSkV7wfuC5GOEoaDhu99LsCt4jgU9aayrC8p6VL4BgD3wykW3sEZCEtXZAdCJsXznq0qjcG6LNLZCi0ZBFYxlbFMNihEc0t0Ji2RTtW1PGOQbyvLbAtlIYGMOJiEjlQwEjj8VJBwWcF5cwTOZB1kmZAJz2UZAXNdHZCA92pr2KwZDZD";
 
     public __CConfig() {}
 
@@ -29,4 +30,6 @@ public class __CConfig {
     public static String getFbApptoken(){
         return FB_APPTOKEN;
     }
+
+    public static String getFbUsertoken() { return FB_USERTOKEN; }
 }

@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c17a822c-9e47-442d-b195-290fecbcccd4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/_chloe/com/intelligence/chloe/_SocialMedia_Facebook.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javax.servlet-3.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/json-lib-2.4-jdk15.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/restfb-1.15.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/misc/Chloe.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/misc/_SocialMedia.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/intelligence/chloe/_SocialMedia_Facebook.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/libs/facebook4j-core-2.3.0.jar" afterPath="$PROJECT_DIR$/misc/facebook4j-core-2.3.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/_chloe/com/intelligence/chloe/AboutChloe.class" afterPath="$PROJECT_DIR$/out/production/_chloe/com/intelligence/chloe/AboutChloe.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/_chloe/com/intelligence/chloe/Chloe.class" afterPath="$PROJECT_DIR$/out/production/_chloe/com/intelligence/chloe/Chloe.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/_chloe/com/intelligence/chloe/ChloeAndI.class" afterPath="$PROJECT_DIR$/out/production/_chloe/com/intelligence/chloe/ChloeAndI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/_chloe/com/intelligence/chloe/_SocialMedia.class" afterPath="$PROJECT_DIR$/out/production/_chloe/com/intelligence/chloe/_SocialMedia.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/_chloe/com/intelligence/chloe/_SocialMedia_Facebook.class" afterPath="$PROJECT_DIR$/out/production/_chloe/com/intelligence/chloe/_SocialMedia_Facebook.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/_chloe/com/intelligence/chloe/__CConfig.class" afterPath="$PROJECT_DIR$/out/production/_chloe/com/intelligence/chloe/__CConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/_chloe/com/intelligence/chloe/__CMisc.class" afterPath="$PROJECT_DIR$/out/production/_chloe/com/intelligence/chloe/__CMisc.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/intelligence/chloe/AboutChloe.java" afterPath="$PROJECT_DIR$/src/com/intelligence/chloe/AboutChloe.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/intelligence/chloe/Chloe.java" afterPath="$PROJECT_DIR$/src/com/intelligence/chloe/Chloe.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/intelligence/chloe/ChloeAndI.java" afterPath="$PROJECT_DIR$/src/com/intelligence/chloe/ChloeAndI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/intelligence/chloe/_SocialMedia.java" afterPath="$PROJECT_DIR$/src/com/intelligence/chloe/_SocialMedia.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/intelligence/chloe/_SocialMedia_Facebook.java" afterPath="$PROJECT_DIR$/src/com/intelligence/chloe/_SocialMedia_Facebook.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/intelligence/chloe/__CConfig.java" afterPath="$PROJECT_DIR$/src/com/intelligence/chloe/__CConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/intelligence/chloe/__CMisc.java" afterPath="$PROJECT_DIR$/src/com/intelligence/chloe/__CMisc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abt/_chloeandi.chloe" afterPath="$PROJECT_DIR$/abt/_chloeandi.chloe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="chloe.iws" />
@@ -51,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/intelligence/chloe/Chloe.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -77,8 +59,8 @@
       <file leaf-file-name="_SocialMedia_Facebook.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/intelligence/chloe/_SocialMedia_Facebook.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6557377">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.59821427">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -586,12 +568,12 @@
       <workItem from="1443921282038" duration="6969000" />
       <workItem from="1444074976749" duration="1979000" />
       <workItem from="1444179043556" duration="11625000" />
-      <workItem from="1444437519636" duration="12510000" />
+      <workItem from="1444437519636" duration="15855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80187000" />
+    <option name="totallyTimeSpent" value="83532000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="15" y="47" width="1210" height="671" extended-state="0" />
@@ -604,7 +586,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39534885" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39534885" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5033058" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -614,7 +596,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24710743" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34551495" sideWeight="0.4966942" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34551495" sideWeight="0.4966942" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3255814" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -636,7 +618,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="36" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -985,30 +967,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/restfb-1.15.0.jar!/com/restfb/DefaultFacebookClient.class">
+    <entry file="file://$PROJECT_DIR$/src/com/intelligence/chloe/__CMisc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8148148">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="e#4046#4047#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/intelligence/chloe/__CConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.8770492">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="41" />
           <folding>
-            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#897#898#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19417475">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.39823008">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="53" />
           <folding />
         </state>
       </provider>
@@ -1028,12 +1013,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/intelligence/chloe/__CMisc.java">
+    <entry file="jar://$PROJECT_DIR$/libs/restfb-1.15.0.jar!/com/restfb/DefaultFacebookClient.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.8148148">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#4046#4047#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1041,15 +1026,15 @@
     <entry file="file://$PROJECT_DIR$/src/com/intelligence/chloe/Chloe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/intelligence/chloe/_SocialMedia_Facebook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6557377">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.59821427">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

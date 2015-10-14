@@ -2,7 +2,7 @@ package com.intelligence.chloe;
 
 import com.restfb.DefaultFacebookClient;
 import com.restfb.FacebookClient;
-import com.restfb.FacebookClient.AccessToken;
+import com.restfb.Parameter;
 import com.restfb.types.User;
 
 /**
@@ -14,8 +14,9 @@ public class _SocialMedia_Facebook extends DefaultFacebookClient {
 
     public _SocialMedia_Facebook() {
         AccessToken accessToken = obtainAppAccessToken(String.valueOf(config.getFbAppid()), config.getFbAppsecret());
-        FacebookClient facebookClient = new DefaultFacebookClient(String.valueOf(accessToken), config.getFbAppsecret(), config.getFbApiversion());
-        User user = facebookClient.fetchObject("me", User.class);
+        //AccessToken userAccessToken = obtainUserAccessToken(String.valueOf(config.getFbAppid()), config.getFbAppsecret(), "http://localhost:3000/", );
+        FacebookClient facebookClient = new DefaultFacebookClient(config.getFbUsertoken(), config.getFbAppsecret(), config.getFbApiversion()); //String.valueOf(accessToken.getAccessToken())
+        User user = facebookClient.fetchObject("me", User.class, Parameter.with("metadata", 1));
         System.out.println(user.getFirstName() + " " + user.getLastName());
     }
 
