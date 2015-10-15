@@ -10,3 +10,5 @@ Facebook App Api: https://developers.facebook.com/apps/1503891386597329/dashboar
 - https://developers.facebook.com/tools/access_token/
 
 https://graph.facebook.com/oauth/access_token?client_id=1503891386597329&client_secret=3e64df46c06d9641900ac72a11e9f14d&grant_type=fb_exchange_token
+
+https://graph.facebook.com/oauth/authorize?client_id=1503891386597329&display=page&redirect_uri=http://www.onmydoorstep.com.au/fbauth&scope=public_profile,email,user_about_me,user_actions.books,user_actions.fitness,user_actions.music,user_actions.news,user_actions.video
